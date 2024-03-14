@@ -1,0 +1,168 @@
+--create database AT19N0135
+--CREATE TABLE NCC (
+--    MaNCC CHAR(5) PRIMARY KEY,
+--    Ten VARCHAR(40) NOT NULL,
+--    Heso INT NOT NULL,
+--    ThPho VARCHAR(20) NOT NULL
+--);
+
+--CREATE TABLE VATTU (
+--    MaVT CHAR(5) PRIMARY KEY,
+--    Ten VARCHAR(40) NOT NULL,
+--    Mau VARCHAR(15) NOT NULL,
+--    TrLuong FLOAT NOT NULL,
+--    ThPho VARCHAR(20) NOT NULL
+--);
+
+--CREATE TABLE DUAN (
+--    MaDA CHAR(5) PRIMARY KEY,
+--    Ten VARCHAR(40) NOT NULL,
+--    ThPho VARCHAR(20) NOT NULL
+--);
+
+--CREATE TABLE CC (
+--    MaNCC CHAR(5),
+--    MaVT CHAR(5),
+--    MaDA CHAR(5),
+--    SLuong INT NOT NULL,
+--    PRIMARY KEY (MaNCC, MaVT, MaDA),
+--    FOREIGN KEY (MaNCC) REFERENCES NCC(MaNCC),
+--    FOREIGN KEY (MaVT) REFERENCES VATTU(MaVT),
+--    FOREIGN KEY (MaDA) REFERENCES DUAN(MaDA)
+--);
+
+-- Insert data into NCC
+--INSERT INTO NCC (MaNCC, Ten, Heso, ThPho) VALUES
+--('S1', 'Son', 20, 'TpHCM'),
+--('S2', 'Tran', 10, 'Ha Noi'),
+--('S3', 'Bach', 30, 'Ha Noi'),
+--('S4', 'Lap', 20, 'TpHCM'),
+--('S5', 'Anh', 30, 'Da Nang');
+
+-- Insert data into VATTU
+--INSERT INTO VATTU (MaVT, Ten, Mau, TrLuong, ThPho) VALUES
+--('P1', 'Dai oc', 'Do', 12.0, 'TpHCM'),
+--('P2', 'Bu long', 'Xanh la', 17.0, 'Ha Noi'),
+--('P3', 'Dinh vit', 'Xanh duong', 17.0, 'Hai Phong'),
+--('P4', 'Dinh vit', 'Do', 14.0, 'TpHCM'),
+--('P5', 'Cam', 'Xanh duong', 12.0, 'Ha Noi'),
+--('P6', 'Banh rang', 'Do', 19.0, 'TpHCM');
+
+-- Insert data into DUAN
+--INSERT INTO DUAN (MaDA, Ten, ThPho) VALUES
+--('J1', 'May phan loai', 'Ha Noi'),
+--('J2', 'Man hinh', 'Viet Tri'),
+--('J3', 'OCR', 'Da Nang'),
+--('J4', 'Bang dieu khien', 'Da Nang'),
+--('J5', 'RAID', 'TpHCM'),
+--('J6', 'EDS', 'Hai Phong'),
+--('J7', 'Bang tu', 'TpHCM');
+
+-- Insert data into CC
+--INSERT INTO CC (MaNCC, MaVT, MaDA, SLuong) VALUES
+--('S1', 'P1', 'J1', 200),
+--('S1', 'P1', 'J4', 700),
+--('S2', 'P3', 'J1', 400),
+--('S2', 'P3', 'J2', 200),
+--('S2', 'P3', 'J3', 200),
+--('S2', 'P3', 'J4', 500),
+--('S2', 'P3', 'J5', 600),
+--('S2', 'P3', 'J6', 400),
+--('S2', 'P3', 'J7', 800),
+--('S2', 'P5', 'J2', 100),
+--('S3', 'P3', 'J1', 200),
+--('S3', 'P4', 'J2', 500),
+--('S4', 'P6', 'J3', 300),
+--('S4', 'P6', 'J7', 300),
+--('S5', 'P2', 'J2', 200),
+--('S5', 'P2', 'J4', 100),
+--('S5', 'P5', 'J5', 500),
+--('S5', 'P5', 'J7', 100),
+--('S5', 'P6', 'J2', 200),
+--('S5', 'P1', 'J4', 100),
+--('S5', 'P3', 'J4', 200),
+--('S5', 'P4', 'J4', 800),
+--('S5', 'P5', 'J4', 400),
+--('S5', 'P6', 'J4', 500);
+
+
+-- 16
+SELECT COUNT(DISTINCT MaDA) as Cau16
+FROM CC 
+WHERE MaNCC = 'S1';
+-- 17
+SELECT SUM(SLuong) as Cau17
+FROM CC 
+WHERE MaNCC = 'S1' AND MaVT = 'P1';
+-- 18
+SELECT CC.MaVT, VATTU.Ten, DUAN.Ten, SUM(CC.SLuong) 
+FROM CC 
+JOIN VATTU ON CC.MaVT = VATTU.MaVT 
+JOIN DUAN ON CC.MaDA = DUAN.MaDA 
+GROUP BY CC.MaVT, VATTU.Ten, DUAN.Ten;
+
+---- 19
+SELECT CC.MaVT, VATTU.Ten, DUAN.Ten 
+FROM CC 
+JOIN VATTU ON CC.MaVT = VATTU.MaVT 
+JOIN DUAN ON CC.MaDA = DUAN.MaDA 
+GROUP BY CC.MaVT, VATTU.Ten, DUAN.Ten 
+HAVING AVG(CC.SLuong) > 350;
+
+
+
+---- 20
+SELECT DUAN.Ten 
+FROM DUAN 
+JOIN CC ON DUAN.MaDA = CC.MaDA 
+WHERE CC.MaNCC = 'S1';
+---- 21
+SELECT VATTU.Mau 
+FROM VATTU 
+JOIN CC ON VATTU.MaVT = CC.MaVT 
+WHERE CC.MaNCC = 'S1';
+-- 22
+SELECT VATTU.MaVT, VATTU.Ten 
+FROM VATTU 
+JOIN CC ON VATTU.MaVT = CC.MaVT 
+JOIN DUAN ON CC.MaDA = DUAN.MaDA 
+WHERE DUAN.ThPho = 'TpHCM';
+-- 23
+SELECT DUAN.MaDA, DUAN.Ten 
+FROM DUAN 
+JOIN CC ON DUAN.MaDA = CC.MaDA 
+WHERE CC.MaNCC = 'S1';
+-- 24
+SELECT NCC.MaNCC, NCC.Ten 
+FROM NCC 
+JOIN CC ON NCC.MaNCC = CC.MaNCC 
+JOIN VATTU ON CC.MaVT = VATTU.MaVT 
+WHERE VATTU.Mau = 'Do';
+-- 25
+SELECT Ten 
+FROM NCC 
+WHERE Heso < (SELECT MAX(Heso) FROM NCC);
+-- 26
+SELECT Ten 
+FROM NCC 
+WHERE MaNCC NOT IN (SELECT MaNCC FROM CC WHERE MaVT = 'P2');
+-- 27
+SELECT DISTINCT NCC.MaNCC, NCC.Ten 
+FROM NCC 
+JOIN CC ON NCC.MaNCC = CC.MaNCC 
+WHERE CC.MaVT IN (SELECT MaVT FROM VATTU WHERE Mau = 'Do');
+-- 28
+SELECT MaNCC, Ten 
+FROM NCC 
+WHERE Heso > (SELECT Heso FROM NCC WHERE MaNCC = 'S1');
+-- 29
+SELECT DUAN.MaDA, DUAN.Ten 
+FROM DUAN 
+JOIN CC ON DUAN.MaDA = CC.MaDA 
+WHERE CC.MaVT = 'P1' AND AVG(CC.SLuong) > (SELECT AVG(SLuong) FROM CC WHERE MaDA = 'J1');
+-- 30
+SELECT NCC.MaNCC, NCC.Ten 
+FROM NCC 
+JOIN CC ON NCC.MaNCC = CC.MaNCC 
+WHERE CC.MaVT = 'P1' AND CC.SLuong > (SELECT AVG(SLuong) FROM CC WHERE MaVT = 'P1' AND MaDA = CC.MaDA);
+
